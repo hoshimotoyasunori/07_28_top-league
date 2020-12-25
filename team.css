@@ -1,0 +1,48 @@
+html{
+    background-color: black;
+}
+header{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    /* flex-direction: column; */
+    width: 100vw;
+    height: 90vh;
+    background-color: black;
+}
+main{
+    margin: 0%;
+    padding: 0%;
+}
+footer{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+tr{
+    width: 100vw;
+}
+/* td{
+    width: 33vw;
+} */
+img{
+    width: calc(97vw/4);
+    height: 23vmax;
+    border-radius: 10px;
+}
+button{
+    border-radius: 10px;
+    width: calc(100vw/4);
+    height: 24vmax;
+    padding: 0%;
+}
+a{
+    font-size: 50px;
+    color: white;
+}
+h1{
+    font-size: 50px;
+    color: white;
+}

@@ -31,8 +31,6 @@ if ($status == false) {
   foreach ($result as $record) {
     // $output .= "<tr><td>{$record["team"]}</td><td>{$record["name"]}</td><tr>";
     $output .= "<tr>";
-    $output .= "<td>{$record["team"]}</td>";
-    $output .= "<td>{$record["name"]}</td>";
     $output .= "<td><img src=\"" . $record['image'] . "\"></td>";
     $output .= "</tr>";
   }
@@ -52,38 +50,51 @@ if ($status == false) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="read.css">
   <title>選手名鑑</title>
 </head>
 
 <body>
-  <fieldset>
-    <legend>選手名鑑</legend>
-    <a href="todo_input.php">登録</a>
-    <table>
-      <thead>
-        <tr>
-          <td>TEAM</td>
-          <td>NAME</td>
-        </tr>
-        <tr>
-          <td>
-            <select name="team-select" id="team-select">
-              <option value="sanix">宗像サニックスブルース </option>
-              <option value="yamaha">ヤマハ発動機ジュビロ</option>
-              <option value="tousiba">東芝ブレイブルーパス</option>
-            </select>
-          </td>
-        </tr>
-
-      </thead>
-      <tbody>
-        <!-- ここに<tr><td>deadline</td><td>todo</td><tr>の形でデータが入る -->
-        <?= $output ?>
-      </tbody>
+  <!-- <header class="header" style="display: none;">
+    <table class="logo">
+      <tr class="box">
+        <td><button onclick="location.href='team-sanix.php'"><img src="team/sanix.jpeg" alt=""></button></td>
+        <td><button onclick="location.href='team-yamaha.php'"><img src="team/yamaha.png" alt=""></button></td>
+        <td><button onclick="location.href='team-toyota.php'"><img src="team/toyota.png" alt=""></button></td>
+        <td><button onclick="location.href='team-tousiba.php'"><img src="team/tousiba.png" alt=""></button></td>
+      </tr>
+      <tr class="box">
+        <td><button onclick="location.href='team-suntory.php'"><img src="team/suntory.png" alt=""></button></td>
+        <td><button onclick="location.href='team-richo.php'"><img src="team/richo.png" alt=""></button></td>
+        <td><button onclick="location.href='team-pana.php'"><img src="team/pana.png" alt=""></button></td>
+        <td><button onclick="location.href='team-nec.php'"><img src="team/nec.jpeg" alt=""></button></td>
+      </tr>
+      <tr class="box">
+        <td><button onclick="location.href='team-n-com.php'"><img src="team/n-com.png" alt=""></button></td>
+        <td><button onclick="location.href='team-kubota.php'"><img src="team/kubota.png" alt=""></button></td>
+        <td><button onclick="location.href='team-kobe.php'"><img src="team/kobe.png" alt=""></button></td>
+        <td><button onclick="location.href='team-jyuukou.php'"><img src="team/jyuukou.jpeg" alt=""></button></td>
+      </tr>
+      <tr class="box">
+        <td><button onclick="location.href='team-honda.php'"><img src="team/honda.png" alt=""></button></td>
+        <td><button onclick="location.href='team-hino.php'"><img src="team/hino.png" alt=""></button></td>
+        <td><button onclick="location.href='team-docomo.php'"><img src="team/docomo.png" alt=""></button></td>
+        <td><button onclick="location.href='team-canon.php'"><img src="team/canon.png" alt=""></button></td>
+      </tr>
     </table>
-  </fieldset>
-  <div> <?= $img1 ?></div>
+  </header> -->
+
+  <!-- <img class="top-league" src="team/topleague.jpg" alt=""> -->
+  <!-- <fieldset> -->
+  <!-- <legend>選手名鑑</legend> -->
+  <header>
+    <a href="todo_input.php">登録</a>
+  </header>
+  <main>
+    <?= $output ?>
+  </main>
+  <!-- </fieldset> -->
+  <!-- <div> </div> -->
 </body>
 
 </html>

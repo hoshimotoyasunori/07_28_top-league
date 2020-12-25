@@ -1,0 +1,21 @@
+/* button{
+    width: calc(100vw/4);
+    height: calc(100vh/4);
+} */
+body{
+    width: 100vw;
+    height: auto;
+    background-color: black;
+}
+main{
+    width: 100vw;
+    height: auto;
+}
+img{
+    width: 20vw;
+    height:20vh;
+}
+a{
+    color: white;
+    font-size: 50px;
+}
