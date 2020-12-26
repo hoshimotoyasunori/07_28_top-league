@@ -58,6 +58,9 @@ if ($status == false) {
 </head>
 
 <body>
+    <!-- <main>
+        <img src="team/sanix.jpeg" alt="">
+    </main> -->
     <header>
         <div id="output">
             <?= $output ?>
@@ -67,9 +70,12 @@ if ($status == false) {
         </div>
     </header>
     <footer>
-        <h1 onclick="">選手データ　　　　</h1>
-
+        <!-- <div class="jump"> -->
+        <h1><a href="data.php">選手データ</a></h1>
+        <!-- </div>
+        <div class="jump"> -->
         <h1><a href="todo_input.php">登録</a></h1>
+        <!-- </div> -->
     </footer>
 </body>
 

@@ -13,10 +13,9 @@ try {
   exit();
 }
 //データ参照SQL作成
-$sql = 'SELECT * FROM rugby_table';
+$sql = 'SELECT * FROM rugby_table order by team asc, tall asc';
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute(); //実行を忘れずに
-
 
 if ($status == false) {
   $error = $stmt->errorInfo(); //失敗時はエラー出力
@@ -26,7 +25,6 @@ if ($status == false) {
   // var_dump($result);
   // exit();
 
-
   $output = "";
   foreach ($result as $record) {
     // $output .= "<tr><td>{$record["team"]}</td><td>{$record["name"]}</td><tr>";
@@ -34,14 +32,27 @@ if ($status == false) {
     $output .= "<td><img src=\"" . $record['image'] . "\"></td>";
     $output .= "</tr>";
   }
-  // $img1 = "";
-  // foreach ($result as $record) {
-  //   $img1 .= "<tr><img src=\"" . $record['image'] . "\"><tr>";
-  //   $output .= "<tr>";
-  //   $output .= "<td>{$record["image"]}</td>";
-  //   $output .= "</tr>";
-  // }
 }
+// $sql1 = 'SELECT * FROM rugby_table';
+// $stmt1 = $pdo1->prepare($sql1);
+// $status1 = $stmt1->execute(); //実行を忘れずに
+
+// if ($status1 == false) {
+//   $error1 = $stmt1->errorInfo(); //失敗時はエラー出力
+//   exit('sqlError:' . $error1[2]);
+// } else {
+//   $result1 = $stmt1->fetchAll(PDO::FETCH_ASSOC); //fetchAllで全部取れる
+//   // var_dump($result);
+//   // exit();
+
+//   $output1 = "";
+//   foreach ($result1 as $record1) {
+//     // $output .= "<tr><td>{$record["team"]}</td><td>{$record["name"]}</td><tr>";
+//     $output1 .= "<tr>";
+//     $output1 .= "<td><img src=\"" . $record1['image'] . "\"></td>";
+//     $output1 .= "</tr>";
+//   }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -92,6 +103,7 @@ if ($status == false) {
   </header>
   <main>
     <?= $output ?>
+    <?= $output1 ?>
   </main>
   <!-- </fieldset> -->
   <!-- <div> </div> -->
